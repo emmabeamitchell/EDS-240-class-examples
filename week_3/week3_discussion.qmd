@@ -1,0 +1,32 @@
+---
+title: "week 3 discussion"
+author: "Emma Bea Mitchell"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| fig-alt: "A stacked histogram of penguin body mass by species, where Gentoo has the highest average body mass (in grams) over Adelie and Chinstrap species, by x percent/ x grams"
+
+
+library(ggplot2)
+library(palmerpenguins)
+
+print(ggplot(data = penguins, aes(x = body_mass_g, fill = species)) +
+  geom_histogram(alpha = 0.5, 
+                 position = "identity") +
+  scale_fill_manual(values = c("darkorange","purple","cyan4")) +
+  labs(x = "Body mass (g)",
+       y = "Frequency",
+       title = "Penguin body masses"))
+```
+
+![](dot_plot.png){fig-alt="dot plot of monthly global temperatures from 1850 to 2023, where temperatures have been significantly above the 20th century average and increasing since 1975. 2023 experienced a record hot month"}
+
+
+<img src="chapman-etal-2024.png" alt="A heat map of global species observations where species observations are disproportionately from high income countries, particularly North American and European countries" width="700px">
+

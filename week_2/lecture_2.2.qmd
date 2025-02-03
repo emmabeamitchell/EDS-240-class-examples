@@ -417,6 +417,11 @@ ggplot(penguins, aes(x = species, y = body_mass_g)) +
 # boxplot + beeswarm ----
 ggplot(penguins, aes(x = species, y = body_mass_g)) +
   geom_boxplot(outlier.shape = NA) 
+
+
+ggplot(penguins, aes(x = species, y = body_mass_g)) +
+  geom_boxplot(outlier.shape = NA) +
+  ggbeeswarm::geom_beeswarm(size = 1) 
 ```
 
 ## Violin plots
